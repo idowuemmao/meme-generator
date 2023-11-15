@@ -1,10 +1,9 @@
 import React from "react";
-import thepic from "../Images/mary.jpg";
+import thepic from "../Images/grass.jpg";
 
 export default function MemeInput() {
   const [allMeme, setAllMeme] = React.useState([]);
   React.useEffect(() => {
-
     fetch(`https://api.imgflip.com/get_memes`)
       .then((response) => response.json())
       .then((data) => setAllMeme(data.data.memes));
